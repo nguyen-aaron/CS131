@@ -1,0 +1,20 @@
+1) cd cs131
+   mkdir ws2
+
+2) echo $HOME
+
+3) id -u
+   id -G
+   id -Gn
+
+4) ls /proc
+
+5) head -n 3 /proc/meminfo
+
+6) head -n 10 /proc/cpuinfo
+
+   tail -n 20 /proc/cpuinfo
+
+7) cat /etc/os-release
+
+ 

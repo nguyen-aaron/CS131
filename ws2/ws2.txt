@@ -1,0 +1,78 @@
+Hello this is the start of my WS2 homework.
+1) Make a directory "ws2" in your cs131 repo and change to it.
+Done.
+
+2) What is your home directory path?  How did you find out (commands used)?
+
+/home/aaron_nguyen03
+echo $HOME
+
+3) What is your UID?  To what group(s) do you belong?  How did you find out (command used)?
+
+1001 (id -u)
+1002 4 20 24 25 29 30 44 46 118 119 1000 1001 (id -G)
+aaron_nguyen03 adm dialout cdrom floppy audio dip video plugdev netdev lxd ubuntu google-sudoers (id -Gn)
+
+4) Using only "ls" (and maybe "grep"), can you find out which file under directory /proc/ contains information about memory (mem) on your server? Which file contains information about the CPU's on your server?
+
+meminfo contains information about memory (mem) on the server
+
+cpuinfo contains information about the CPU's on the server
+
+#Output of ls /proc
+1     1055  12   16   220  31   4    5    626  83   90   99          crypto         fs          kmsg         modules       self           timer_list
+10    106   120  169  222  32   443  512  7    84   92   acpi        devices        interrupts  kpagecgroup  mounts        slabinfo       tty
+100   107   127  18   24   323  446  525  730  85   93   bootconfig  diskstats      iomem       kpagecount   mtrr          softirqs       uptime
+101   1082  128  19   25   324  479  563  736  86   95   buddyinfo   dma            ioports     kpageflags   net           stat           version
+102   1083  129  2    26   325  483  595  739  87   96   bus         driver         irq         loadavg      pagetypeinfo  swaps          version_signature
+1034  11    13   20   27   326  489  6    8    88   97   cgroups     dynamic_debug  kallsyms    locks        partitions    sys            vmallocinfo
+104   1117  130  206  29   327  496  614  80   883  98   cmdline     execdomains    kcore       mdstat       pressure      sysrq-trigger  vmstat
+1047  116   14   21   3    33   497  615  81   886  985  consoles    fb             key-users   meminfo      schedstat     sysvipc        zoneinfo
+1054  119   15   22   30   34   498  617  82   887  986  cpuinfo     filesystems    keys        misc         scsi          thread-self
+ 
+5) Use head to check the memory information file you found above. How much total memory is on your server?
+
+head -n 3 /proc/meminfo
+
+MemTotal:         976904 kB #TOTAL MEMORY HERE
+MemFree:          544728 kB
+MemAvailable:     665256 kB
+
+6) Then use head, tail, cat to check the cpu information file you found above. How many processors are on your server? What is the processor architecture name? What is the processor speed in GHz?
+
+head -n 10 /proc/cpuinfo
+
+processor       : 0 #PROCESSOR NUMBER HERE
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 79
+model name      : Intel(R) Xeon(R) CPU @ 2.20GHz # ARHITECTURE NAME HERE
+stepping        : 0
+microcode       : 0xffffffff
+cpu MHz         : 2199.998
+cache size      : 56320 KB
+physical id     : 0
+
+tail -n 20 /proc/cpuinfo
+
+cpu MHz         : 2199.998 #OUTPUTE HERE
+cache size      : 56320 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi
+bogomips        : 4399.99
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 46 bits physical, 48 bits virtual
+power management:
+
+Processor speed in GHz: output says 2199.998GHz, CPU model says 2.20GHz
