@@ -1,0 +1,9 @@
+  193  uniq data.txt 
+  194  sort data.txt | uniq data.txt 
+  195  sort data.txt | uniq 
+  231  sort data.txt | uniq | wc
+  234  history 50 | grep *uniq*
+  235  history 50 | grep uniq
+  236  history 100 | grep uniq
+  238  history | grep uniq
+  240  history | grep uniq > uniq.txt

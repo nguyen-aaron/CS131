@@ -1,0 +1,7 @@
+1) cat 2019-01-h1.csv | grep '2019-01-02' | cut -d ',' -f8 | sort | uniq -c | sort -r | head -3 > ws3.txt 
+
+read the csv file, find all January 2nd, 2019 entires, extract the pickup location column (seperated by commas), sort the data, find count for each unique pickup location, sort in reversed order (descending order), only get the top 3, overwrite into ws3.txt 
+
+cat 2019-01-h1.csv | grep '2019-01-10' | cut -d ',' -f8 | sort | uniq -c | sort -r | head -3 >> ws3.txt
+
+read the csv file, find all January 10th, 2019 entires, extract the pickup location column (seperated by commas), sort the data, find count for each unique pickup location, sort in reversed order (descending order), only get the top 3, append into ws3.txt

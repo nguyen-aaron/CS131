@@ -1,0 +1,1 @@
+rm: cannot remove 'temp2': Is a directory

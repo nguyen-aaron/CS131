@@ -11,7 +11,9 @@
 
 5) head -n 3 /proc/meminfo
 
-6) head -n 10 /proc/cpuinfo
+6) cat /proc/cpuinfo` 
+
+   head -n 10 /proc/cpuinfo
 
    tail -n 20 /proc/cpuinfo
 

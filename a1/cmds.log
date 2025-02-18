@@ -1,0 +1,17 @@
+1) vim ~/.bashrc
+   source ~/.bashrc
+
+2)
+ 
+ 2a) mkdir FARE
+ 
+ 2b) grep ",151.0,239.0," 2019-01-h1.csv | cut -d ',' -f 11 > FARE/151.0-239.0.txt
+     grep ",239.0,246.0," 2019-01-h1.csv | cut -d ',' -f 11 > FARE/239.0-246.0.txt
+
+ 2c) echo "scale=2; ($(paste -sd+ FARE/151.0-239.0.txt)) / ($(wc -l < FARE/151.0-239.0.txt))" | bc >> a1.txt
+     echo "scale=2; ($(paste -sd+ FARE/239.0-246.0.txt)) / ($(wc -l < FARE/239.0-246.0.txt))" | bc >> a1.txt
+
+ 2d) grep '"2019-01-10' 2019-01-h1.csv | cut -d ',' -f 17 | sort -n | tail -n 1
+
+ 2e) grep -E '^[^,]+,[^,]+,[^,]+,[3-9]' 2019-01-h1.csv | cut -d ',' -f9 | sort | uniq -c | sort -nr | head -10    
+
