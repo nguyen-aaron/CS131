@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FILE="$HOME/.bashrc"
+if [ -f $FILE ]; then
+    echo "File"
+elif [ -d $FILE ]; then
+    echo "Directory"
+fi
+
