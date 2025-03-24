@@ -1,0 +1,3 @@
+touch a3.txt  cmnd.log  grader.awk  grades.csv
+
+awk -f grader.awk grades.csv

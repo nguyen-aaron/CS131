@@ -1,0 +1,11 @@
+#Output of running awk -f grader.awk grades.csv
+
+Student Name | Total Score | Average Score | Status
+David         | 195           |         65.00 |   Fail 
+Eve           | 265           |         88.33 |   Pass 
+Bob           | 246           |         82.00 |   Pass 
+Charlie       | 270           |         90.00 |   Pass 
+Alice         | 253           |         84.33 |   Pass 
+
+Top Student:   Charlie scored 270
+Worst Student: David scored 195
