@@ -1,0 +1,11 @@
+id,name,age,email,score
+1,John,31,john@sjsu.edu,4.5
+2,Aaron,21,aaron@sjsu.edu,
+3,Bobby,,bobby@sjsu.edu,5.0
+4,Charlie,,charlie@sjsu.edu,
+5,David,26,david@sjsu.edu,4.9
+6,Steph,18,steph@sjsu.edu,
+7,Frank,,frank@sjsu.edu,4.0
+8,Grace,,grace@sjsu.edu,
+9,Hannah,23,hannah@sjsu.edu,4.3
+10,Ian,24,ian@sjsu.edu,
